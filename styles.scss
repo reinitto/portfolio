@@ -1,0 +1,274 @@
+$colors: (
+  primary:
+    rgba(
+      $color: black,
+      $alpha: 0.6
+    ),
+  primary-light: lighten(black, 65%),
+  accent:
+    rgba(
+      $color: white,
+      $alpha: 0.5
+    ),
+  secondary:
+    rgba(
+      $color: red,
+      $alpha: 0.9
+    ),
+  secondary-dark: darken(red, 25%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: color(primary);
+  //making space for navbar
+  padding-top: 70px;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid color(secondary);
+  transition: all 0.3s ease-out;
+}
+
+.triangle-right-hover {
+  transform: scale(2) rotate(90deg);
+  transition: all 0.3s ease-out;
+}
+#introSvg {
+  width: 100%;
+  height: max(100px);
+}
+
+#portfolio-start {
+  width: 100%;
+  height: max(100px);
+}
+.introText {
+  text-align: center;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 1040;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  #mainNav {
+    background-color: rgba(color(accent), 1);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    #logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2em 1em;
+
+      #name {
+        h4 {
+          line-height: 1.6;
+        }
+      }
+    }
+    #sandwich {
+      padding: 0.5em;
+      margin: 0.5em;
+      border: 2px solid color(primary-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .navItem {
+    color: white;
+    display: flex;
+    position: absolute;
+    top: -100px;
+    width: 0;
+    height: 0px;
+    border: 2px solid color(secondary);
+    background-color: color(secondary-dark);
+    transition: all 0.1s ease-out;
+  }
+  // .navItem:hover {
+  //   background-color: color(secondary-dark);
+  // }
+  .navItem-visible {
+    display: flex;
+    position: relative;
+    top: 0;
+    margin: 0.1em auto;
+    width: 95%;
+    height: max(50px);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-out;
+  }
+}
+
+#list {
+  position: absolute;
+  top: 200px;
+  padding-left: 1em;
+
+  a {
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    mix-blend-mode: difference;
+    font: 900 5vmin/5vh cookie, cursive;
+
+    strong {
+      display: inline-block;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+#introPanel {
+  overflow: hidden;
+  height: 25em;
+  background: url(https://lindenwoodlions.com/images/2011/10/5/Reinis_Rozensteins.jpg);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 67% 100%, 15% 0);
+  clip-path: polygon(100% 0, 100% 100%, 67% 100%, 15% 0);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#portfolio {
+  .card {
+    margin: 1em 1em;
+
+    text-align: center;
+    a {
+      margin: 0 0.5em;
+      background-color: color(secondary-dark);
+      border-color: color(secondary);
+    }
+    .card-body {
+      background: color(primary-light);
+    }
+  }
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  #social-media-links {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      color: color(secondary-dark);
+      display: flex;
+      margin: 1em 1em;
+      flex-direction: column;
+      align-items: center;
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  #contact-form {
+    margin: 0 auto;
+    padding: 0em 1em;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-group {
+      position: relative;
+      padding-top: 0.5rem;
+      margin: 0;
+
+      input:placeholder-shown + label {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      textarea:placeholder-shown + label {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+    }
+    input,
+    textarea {
+      width: 100%;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    textarea:valid,
+    input:valid {
+      border-color: rgb(51, 209, 51);
+    }
+    textarea:invalid,
+    input:invalid {
+      border-color: color(secondary);
+    }
+
+    textarea:invalid + label + .help-text::before,
+    input:invalid + label + .help-text::before {
+      content: "*Required field";
+    }
+
+    label {
+      position: relative;
+      top: -60px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s ease-out;
+    }
+
+    textarea + label {
+      position: relative;
+      top: -260px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s ease-out;
+    }
+
+    span {
+      float: right;
+    }
+  }
+}
+form:invalid > #contact-submit {
+  pointer-events: none;
+}
+
+//Styles for SVG text
+.small {
+  font: italic 13px sans-serif;
+}
+.heavy {
+  font: bold 30px sans-serif;
+}
+
+/* Note that the color of the text is set with the    *
+ * fill property, the color property is for HTML only */
+.Rrrrr {
+  font: italic 40px serif;
+  fill: color(secondary);
+}

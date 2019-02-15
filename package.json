@@ -1,0 +1,19 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "watchify app.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snapsvg": "^0.5.1",
+    "vivus": "^0.4.4"
+  },
+  "devDependencies": {
+    "watchify": "^3.11.0"
+  }
+}
