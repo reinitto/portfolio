@@ -2,16 +2,18 @@
   "name": "portfolio2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "/public/index.html",
   "scripts": {
-    "start": "node bundle.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "watchify app.js -o bundle.js"
+    "bundle": "watchify app.js -o public/js/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "snapsvg": "^0.5.1",
+    "express": "^4.16.4",
+    "gasp": "0.0.2",
+    "path": "^0.12.7",
     "vivus": "^0.4.4"
   },
   "devDependencies": {

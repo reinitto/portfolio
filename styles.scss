@@ -4,6 +4,7 @@ $colors: (
       $color: black,
       $alpha: 0.6
     ),
+  primary-dark: lighten(black, 15%),
   primary-light: lighten(black, 65%),
   accent:
     rgba(
@@ -27,9 +28,36 @@ body {
   min-width: 100%;
   margin: 0;
   padding: 0;
-  background-color: color(primary);
   //making space for navbar
   padding-top: 70px;
+  .container {
+    width: 120%;
+    background-color: color(primary);
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+
+  @media (min-width: 425px) {
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 40px;
+    }
+  }
 }
 
 .triangle-right {
@@ -45,9 +73,13 @@ body {
   transform: scale(2) rotate(90deg);
   transition: all 0.3s ease-out;
 }
-#introSvg {
+.svg-container {
   width: 100%;
-  height: max(100px);
+}
+
+#profile-pic {
+  width: 60%;
+  margin-left: 40%;
 }
 
 #portfolio-start {
@@ -59,6 +91,9 @@ body {
 }
 
 .navigation {
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
   position: fixed;
   top: 0;
   z-index: 1040;
@@ -67,10 +102,15 @@ body {
   justify-content: space-between;
   flex-direction: column;
   #mainNav {
-    background-color: rgba(color(accent), 1);
+    background-image: linear-gradient(color(secondary), color(primary));
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 70px;
+    border: 2px solid color(secondary);
+    @media (min-width: 768px) {
+      // width: 40%;
+      flex-grow: 2;
+    }
     #logo {
       display: flex;
       justify-content: center;
@@ -78,12 +118,15 @@ body {
       padding: 0.2em 1em;
 
       #name {
-        h4 {
+        h3 {
           line-height: 1.6;
         }
       }
     }
     #sandwich {
+      @media (min-width: 1024px) {
+        display: none;
+      }
       padding: 0.5em;
       margin: 0.5em;
       border: 2px solid color(primary-light);
@@ -101,12 +144,24 @@ body {
     width: 0;
     height: 0px;
     border: 2px solid color(secondary);
-    background-color: color(secondary-dark);
+    background-image: linear-gradient(color(secondary), color(primary));
     transition: all 0.1s ease-out;
+
+    @media (min-width: 1024px) {
+      position: relative;
+      top: auto;
+      height: auto;
+      flex-grow: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        display: inline-block;
+      }
+    }
   }
-  // .navItem:hover {
-  //   background-color: color(secondary-dark);
-  // }
   .navItem-visible {
     display: flex;
     position: relative;
@@ -117,26 +172,55 @@ body {
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-out;
+    @media (max-width: 1024px) {
+      background-image: linear-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 1));
+    }
   }
 }
 
 #list {
   position: absolute;
-  top: 200px;
-  padding-left: 1em;
+  top: 25%;
+  padding-left: 10%;
 
+  @media (min-width: 425px) {
+    top: 30%;
+    left: 3%;
+  }
+
+  @media (min-width: 768px) {
+    top: 45%;
+    left: 5%;
+  }
+
+  @media (min-width: 1024px) {
+    top: 65%;
+    left: 7%;
+  }
+  @media (min-width: 1440px) {
+    top: 75%;
+    left: 10%;
+  }
+  @media (min-width: 1800px) {
+    top: 75%;
+    left: 20%;
+  }
   a {
-    padding: 20px 0;
+    padding: 5% 0;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: color(accent);
     text-align: left;
     mix-blend-mode: difference;
     font: 900 5vmin/5vh cookie, cursive;
 
     strong {
       display: inline-block;
+      h3 {
+        background-color: black;
+        box-shadow: 0 0 35px color(primary-dark);
+      }
     }
 
     span {
@@ -148,16 +232,23 @@ body {
 #introPanel {
   overflow: hidden;
   height: 25em;
-  background: url(https://lindenwoodlions.com/images/2011/10/5/Reinis_Rozensteins.jpg);
+  // background: url(https://lindenwoodlions.com/images/2011/10/5/Reinis_Rozensteins.jpg);
+  background-image: url("/public/assets/Reinis_Rozensteins.svg");
   -webkit-clip-path: polygon(100% 0, 100% 100%, 67% 100%, 15% 0);
   clip-path: polygon(100% 0, 100% 100%, 67% 100%, 15% 0);
-  opacity: 0.3;
-  filter: alpha(opacity=30);
+  // opacity: 0.3;
+  // filter: alpha(opacity=30);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-blend-mode: difference;
 }
 
 #portfolio {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
   .card {
     margin: 1em 1em;
 
@@ -175,11 +266,17 @@ body {
 #contact {
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    width: 80%;
+    margin: 1em auto;
+  }
   #social-media-links {
     display: flex;
     justify-content: space-evenly;
     a {
-      color: color(secondary-dark);
+      width: max(100px);
+      box-shadow: 0px 0px 10px 10px;
+      color: color(secondary);
       display: flex;
       margin: 1em 1em;
       flex-direction: column;
@@ -187,6 +284,10 @@ body {
       span {
         display: block;
         text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 400;
+        padding: 10px 10px;
       }
     }
   }
@@ -256,19 +357,4 @@ body {
 }
 form:invalid > #contact-submit {
   pointer-events: none;
-}
-
-//Styles for SVG text
-.small {
-  font: italic 13px sans-serif;
-}
-.heavy {
-  font: bold 30px sans-serif;
-}
-
-/* Note that the color of the text is set with the    *
- * fill property, the color property is for HTML only */
-.Rrrrr {
-  font: italic 40px serif;
-  fill: color(secondary);
 }

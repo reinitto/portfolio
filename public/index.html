@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="public/css/styles.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div id="mainNav">
+        <div id="logo">
+          <div id="name">
+            <a href="#reinis"> <h4>Reinis Rozensteins</h4></a>
+          </div>
+        </div>
+        <div id="sandwich">
+          <a><i class="fas fa-bars fa-2x"></i></a>
+        </div>
+      </div>
+
+      <a class="navItem" href="#about"
+        ><div><h4>About</h4></div></a
+      >
+
+      <a class="navItem" href="#my-portfolio-svg">
+        <div><h4>Portfolio</h4></div></a
+      >
+
+      <a class="navItem" href="#contact-me-svg">
+        <div><h4>Contact me</h4></div></a
+      >
+
+      <a class="navItem" href="#"
+        ><div><h4>CV</h4></div></a
+      >
+    </nav>
+    <!-- Navigation end -->
+    <div class="container">
+      <!-- About Section -->
+      <section id="about">
+        <div class="svg-container">
+          <object
+            id="welcome-svg"
+            type="image/svg+xml"
+            data="/public/assets/welcome.svg"
+          >
+            welcome
+          </object>
+        </div>
+        <div id="profile-pic">
+          <object
+            id="reinis"
+            type="image/svg+xml"
+            data="/public/assets/Reinis_Rozensteins.svg"
+          >
+            reinis
+          </object>
+        </div>
+        <!-- <div id="introPanel"></div> -->
+        <ul id="list">
+          <a href="#about">
+            <span class="triangle-right"></span>
+            <strong> <h3>My name is Reinis</h3> </strong>
+          </a>
+          <a href="#portfolio-start">
+            <span class="triangle-right"></span>
+            <strong> <h3>Im a web developer</h3></strong>
+          </a>
+          <a href="#portfolio-start">
+            <span class="triangle-right"></span>
+            <strong> <h3>i like javascript</h3></strong>
+          </a>
+          <a href="#contact-start">
+            <span class="triangle-right"></span>
+            <strong> <h3>im looking for a job</h3> </strong>
+          </a>
+        </ul>
+      </section>
+
+      <!-- Portfolio Section  -->
+      <div class="svg-container">
+        <object
+          id="my-portfolio-svg"
+          type="image/svg+xml"
+          data="/public/assets/my_portfolio.svg"
+        >
+          my portfolio
+        </object>
+      </div>
+      <section id="portfolio">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="public/assets/Screenshot (1).png"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Blog site for my dad</h4>
+            <p class="card-text">Built using react, node, express</p>
+            <a
+              target="_blank"
+              href="https://sporto-vesels-dzivo-labak.herokuapp.com/"
+              class="btn btn-primary"
+              >See Website</a
+            >
+            <a
+              target="_blank"
+              href="https://github.com/reinitto/dzivo-vesels"
+              class="btn btn-primary"
+              >See GitHub repo</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="public/assets/Screenshot (2).png"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Udemy project</h4>
+            <p class="card-text">Made mongodb,express, node, react, jwt</p>
+            <a
+              target="_blank"
+              href="https://floating-shore-78627.herokuapp.com/"
+              class="btn btn-primary"
+              >See Project</a
+            >
+            <a
+              target="_blank"
+              href="https://floating-shore-78627.herokuapp.com/"
+              class="btn btn-primary"
+              >See GitHub repo</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="public/assets/Screenshot (3).png"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Uber clone</h4>
+            <p class="card-text">Made using googlemaps api, express, node</p>
+            <a
+              target="_blank"
+              href="https://cent50.herokuapp.com/"
+              class="btn btn-primary"
+              >See App</a
+            >
+            <a
+              target="_blank"
+              href="https://github.com/reinitto/50_cent"
+              class="btn btn-primary"
+              >See GitHub repo</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="public/assets/Screenshot (4).png"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Gallery builder</h4>
+            <p class="card-text">
+              Made with EJS, Cloudinary, babel, mongodb, multer
+            </p>
+            <a
+              target="_blank"
+              href="http://www.rozensteins.com/"
+              class="btn btn-primary"
+              >See Website</a
+            >
+            <a
+              target="_blank"
+              href="https://github.com/reinitto/picshare"
+              class="btn btn-primary"
+              >See GitHub repo</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Contact Me -->
+      <div class="svg-container">
+        <object
+          id="contact-me-svg"
+          type="image/svg+xml"
+          data="/public/assets/contact_me.svg"
+        >
+          contact me
+        </object>
+      </div>
+      <section id="contact">
+        <div id="social-media-links">
+          <a
+            href="https://www.linkedin.com/in/reinis-rozensteins/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-linkedin fa-3x"></i> <span> LinkedIn </span></a
+          >
+          <a
+            href="https://github.com/reinitto"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github-square fa-3x"></i> <span> GitHub </span></a
+          >
+          <a
+            href="mailto:rozensteins.reinis@gmail.com?subject=Job%20interview&body=We%E2%80%99re+impressed+with+your+credentials+and+we+believe+your+interests+and+qualifications+may+align+well+with+the+needs+of+the+position+and+the+larger+goals+of+our+company.+We%E2%80%99d+like+to+invite+you+to+meet+with+our+hiring+team+to+find+out+more+about+your+background.%0D%0A%0D%0AMight+you+be+available+to+attend+an+interview+session+with+me+and+some+of+our+associate+staffing+managers+on+%5BENTER+PREFERRED+MEETING+DATES%5D+at+%5BENTER+LOCATION%5D.%0D%0A%0D%0A+If+you%E2%80%99re+not+available+at+this+time%2C+we%E2%80%99re+also+happy+to+meet+with+you+on+%5BENTER+OTHER+MEETING+DATES%5D+at+the+same+location.%0D%0A%0D%0APlease+reach+out+to+me+by+phone+or+email+using+the+contact+information+below+and+we+will+confirm+your+interest+and+establish+an+interview+appointment+at+that+point.+Here+at+%5BENTER+COMPANY+NAME%5D%2C+we%E2%80%99re+proud+of+our+growing+success+and+expanding+market+presence+in+the+region.+%0D%0AIf+you+share+our+passion+for+quality+business%2C+we%E2%80%99d+love+to+hear+from+you%21%0D%0ARespectfully%2C%0D%0A%5BENTER+YOUR+NAME%5D%2C%0D%0A%5BENTER+YOUR+EMAIL%5D%2C+%0D%0A%5BENTER+YOUR+PHONE%5D%2C%0D%0A%5BENTER+YOUR+JOB+TITLE%5D"
+            ><i class="fas fa-envelope fa-3x"></i> <span> Email </span></a
+          >
+        </div>
+        <div id="contact-form">
+          <form action="/" method="post" id="form-form">
+            <fieldset form="form-form">
+              <legend>Quick Contact</legend>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="your-name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+                <label for="your-name">Name</label>
+                <span class="help-text"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="your-email"
+                  placeholder="Your Email Address"
+                  required
+                />
+                <label for="your-email">Email</label>
+                <span class="help-text"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="your-phone"
+                  placeholder="Your Phone Number"
+                />
+                <label for="your-phone">Phone Number</label>
+                <span class="help-text"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="your-company"
+                  placeholder="Your Company"
+                  required
+                />
+                <label for="your-company">Company</label>
+                <span class="help-text"></span>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  rows="10"
+                  cols="70"
+                  type="text"
+                  id="your-message"
+                  placeholder="Type your Message Here...."
+                  required
+                ></textarea>
+                <label for="your-message">Message</label>
+                <span class="help-text"></span>
+              </div>
+            </fieldset>
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...Sending"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="public/js/bundle.js"></script>
+  </body>
+</html>
