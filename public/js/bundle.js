@@ -33,15 +33,6 @@ introItems.forEach(item => {
 });
 
 if (window.screen.width > 996) {
-  new Vivus("welcome-svg", { duration: 200 }, function() {
-    return;
-  });
-  new Vivus("my-portfolio-svg", { duration: 200 }, function() {
-    return;
-  });
-  new Vivus("contact-me-svg", { duration: 200 }, function() {
-    return;
-  });
   new Vivus(
     "reinis",
     {
@@ -51,6 +42,15 @@ if (window.screen.width > 996) {
       return;
     }
   );
+  new Vivus("welcome-svg", { duration: 200 }, function() {
+    return;
+  });
+  new Vivus("my-portfolio-svg", { duration: 200 }, function() {
+    return;
+  });
+  new Vivus("contact-me-svg", { duration: 200 }, function() {
+    return;
+  });
 }
 
 },{"vivus":2}],2:[function(require,module,exports){
