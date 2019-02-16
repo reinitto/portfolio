@@ -270,7 +270,7 @@ body h4 {
   color: rgba(255, 255, 255, 0.5);
   text-align: left;
   mix-blend-mode: difference;
-  font: 900 5vmin/5vh cookie, cursive;
+  font: 900 5vmin/5vh cookie, georgia;
 }
 
 #list a strong {
