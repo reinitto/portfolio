@@ -31,24 +31,27 @@ introItems.forEach(item => {
     item.children[0].classList.toggle("triangle-right-hover");
   });
 });
-new Vivus("welcome-svg", { duration: 200 }, function() {
-  return;
-});
-new Vivus("my-portfolio-svg", { duration: 200 }, function() {
-  return;
-});
-new Vivus("contact-me-svg", { duration: 200 }, function() {
-  return;
-});
-new Vivus(
-  "reinis",
-  {
-    duration: 200
-  },
-  function() {
+
+if (window.screen.width > 996) {
+  new Vivus("welcome-svg", { duration: 200 }, function() {
     return;
-  }
-);
+  });
+  new Vivus("my-portfolio-svg", { duration: 200 }, function() {
+    return;
+  });
+  new Vivus("contact-me-svg", { duration: 200 }, function() {
+    return;
+  });
+  new Vivus(
+    "reinis",
+    {
+      duration: 200
+    },
+    function() {
+      return;
+    }
+  );
+}
 
 },{"vivus":2}],2:[function(require,module,exports){
 /**
